@@ -4,6 +4,12 @@ describe("add function returns the sum of two numbers", () => {
   test("add(1, 1) => 2", () => {
     expect(mathFunctions.add(1, 2)).toEqual(3);
   });
+
+  test("add(what, you) => undefined", () => {
+    expect(() => {
+      mathFunctions.add("what", "you");
+    }).toThrow(TypeError);
+  });
 });
 
 describe("subtract function returns the difference of two numbers", () => {
