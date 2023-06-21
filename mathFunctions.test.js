@@ -16,11 +16,23 @@ describe("subtract function returns the difference of two numbers", () => {
   test("subtract(1, 1) => 0", () => {
     expect(mathFunctions.subtract(1, 1)).toBe(0);
   });
+
+  test("subtract(what, you) => undefined", () => {
+    expect(() => {
+      mathFunctions.subtract("what", "you");
+    }).toThrow(TypeError);
+  });
 });
 
 describe("multiply function returns the product of two numbers", () => {
   test("multiply(1,5) => 5", () => {
     expect(mathFunctions.multiply(1, 5)).toBe(5);
+  });
+
+  test("multiply(what, you) => undefined", () => {
+    expect(() => {
+      mathFunctions.multiply("what", "you");
+    }).toThrow(TypeError);
   });
 });
 
@@ -31,5 +43,11 @@ describe("divide function returns the quotient of first number by the second num
 
   test("divide(5,0) => undefined", () => {
     expect(mathFunctions.divide(5, 0)).toBe(Infinity);
+  });
+
+  test("divide(what, you) => undefined", () => {
+    expect(() => {
+      mathFunctions.divide("what", "you");
+    }).toThrow(TypeError);
   });
 });
