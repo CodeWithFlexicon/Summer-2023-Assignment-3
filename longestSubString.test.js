@@ -12,4 +12,10 @@ describe("longestSubString() takes in a string and finds the length of the longe
   test("longestSubString(pwwkew) => 3", () => {
     expect(longestSubString("pwwkew")).toBe(3);
   });
+
+  test("longestSubString(100) => typeError", () => {
+    expect(() => {
+      longestSubString(100);
+    }).toThrow("The parameter being passed is not a string");
+  });
 });

@@ -1,4 +1,7 @@
 function reverseString(str) {
+  if (typeof str !== "string") {
+    throw new TypeError("The parameter being passed is not a string");
+  }
   if (str.length === 0) {
     return null;
   }

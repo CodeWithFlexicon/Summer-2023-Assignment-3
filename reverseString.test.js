@@ -16,4 +16,10 @@ describe("Given a string str, return the reverse of the string", () => {
   test("reverseString(drah si tpircSavaJ) => JavaScript is Hard", () => {
     expect(reverseString("draH si tpircSavaJ")).toBe("JavaScript is Hard");
   });
+
+  test("reverseString(55) => TypeError", () => {
+    expect(() => {
+      reverseString(55);
+    }).toThrow("The parameter being passed is not a string");
+  });
 });

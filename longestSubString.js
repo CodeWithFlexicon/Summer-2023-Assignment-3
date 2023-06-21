@@ -1,4 +1,7 @@
 function longestSubString(str) {
+  if (typeof str !== "string") {
+    throw new TypeError("The parameter being passed is not a string");
+  }
   //Check the length of the string and return approriate length
   if (str.length == 0) {
     return 0;
