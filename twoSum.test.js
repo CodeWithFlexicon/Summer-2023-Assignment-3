@@ -12,4 +12,20 @@ describe("twoSum takes in an array of integers and a target integer target and r
   test("twoSum([-1,-2,-3,-4,-5], -8) => [2,4]", () => {
     expect(twoSum([-1, -2, -3, -4, -5], -8)).toEqual([2, 4]);
   });
+
+  test("twoSum([2,9,4,17], 32) => Not Found", () => {
+    expect(twoSum([2, 9, 4, 17], 32)).toEqual("Not Found");
+  });
+
+  test("twoSum(what, 21) => TypeError", () => {
+    expect(() => {
+      twoSum("what", 21);
+    }).toThrow(TypeError);
+  });
+
+  test("twoSum([2,7,11,15], what) => TypeError", () => {
+    expect(() => {
+      twoSum([2, 7, 11, 15], "what");
+    }).toThrow(TypeError);
+  });
 });
