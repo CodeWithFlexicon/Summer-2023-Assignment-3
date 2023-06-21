@@ -67,19 +67,23 @@ describe("addToCart() adds an item with a specified quantity and price to the sh
   test("removeFromCart(Protein, 5)", () => {
     expect(() => {
       shoppingCart.removeFromCart("Protein", 5);
-    }).toThrow(Error);
+    }).toThrow(
+      "You are trying to remove a quantity of an item that is more than in your cart"
+    );
   });
 
   test("removeFromCart(PineApple, 1)", () => {
     expect(() => {
       shoppingCart.removeFromCart("PineApple", 1);
-    }).toThrow(Error);
+    }).toThrow("This item is not in your cart");
   });
 
   test("removeFromCart(Juice, 0)", () => {
     expect(() => {
       shoppingCart.removeFromCart("Juice", 0);
-    }).toThrow(Error);
+    }).toThrow(
+      "You cannot remove 0 items unless... magic and knowledge of the unknown?"
+    );
   });
 
   test("calculateTotal() => 51.49", () => {

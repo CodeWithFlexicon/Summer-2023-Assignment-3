@@ -8,7 +8,7 @@ describe("add function returns the sum of two numbers", () => {
   test("add(what, you) => undefined", () => {
     expect(() => {
       mathFunctions.add("what", "you");
-    }).toThrow(TypeError);
+    }).toThrow("One or more parameters are not a number");
   });
 });
 
@@ -20,7 +20,7 @@ describe("subtract function returns the difference of two numbers", () => {
   test("subtract(what, you) => undefined", () => {
     expect(() => {
       mathFunctions.subtract("what", "you");
-    }).toThrow(TypeError);
+    }).toThrow("One or more parameters are not a number");
   });
 });
 
@@ -32,7 +32,7 @@ describe("multiply function returns the product of two numbers", () => {
   test("multiply(what, you) => undefined", () => {
     expect(() => {
       mathFunctions.multiply("what", "you");
-    }).toThrow(TypeError);
+    }).toThrow("One or more parameters are not a number");
   });
 });
 
@@ -48,6 +48,6 @@ describe("divide function returns the quotient of first number by the second num
   test("divide(what, you) => undefined", () => {
     expect(() => {
       mathFunctions.divide("what", "you");
-    }).toThrow(TypeError);
+    }).toThrow("One or more parameters are not a number");
   });
 });

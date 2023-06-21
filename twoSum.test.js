@@ -20,12 +20,12 @@ describe("twoSum takes in an array of integers and a target integer target and r
   test("twoSum(what, 21) => TypeError", () => {
     expect(() => {
       twoSum("what", 21);
-    }).toThrow(TypeError);
+    }).toThrow("An array has not been passed");
   });
 
   test("twoSum([2,7,11,15], what) => TypeError", () => {
     expect(() => {
       twoSum([2, 7, 11, 15], "what");
-    }).toThrow(TypeError);
+    }).toThrow("The target is not a number");
   });
 });

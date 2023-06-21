@@ -20,4 +20,10 @@ describe("Given an array of non-negative integers representing the heights of ve
   test("containMostWater([1]) => null", () => {
     expect(containMostWater([1])).toBe(null);
   });
+
+  test("containMostWater(what) => TypeError", () => {
+    expect(() => {
+      containMostWater("what");
+    }).toThrow("An array has not been passed");
+  });
 });

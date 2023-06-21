@@ -2,7 +2,7 @@ function twoSum(arr, target) {
   if (!Array.isArray(arr)) {
     throw new TypeError("An array has not been passed");
   }
-  if (typeof target !== "number") {
+  if (isNaN(target)) {
     throw new TypeError("The target is not a number");
   }
   //Create a hashmap to store key:value pairs, in this case element : index
