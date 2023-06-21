@@ -1,4 +1,7 @@
 function reverseString(str) {
+  if (typeof str !== "string") {
+    throw new TypeError("This is not a string");
+  }
   if (str.length === 0) {
     return null;
   }
@@ -14,6 +17,9 @@ function reverseString(str) {
 }
 
 function isPalindrome(str) {
+  if (typeof str !== "string") {
+    throw new TypeError("This is not a string");
+  }
   if (str.length === 0) {
     return null;
   }

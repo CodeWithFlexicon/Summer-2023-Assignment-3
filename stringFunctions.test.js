@@ -12,6 +12,16 @@ describe("reverseString() should take a string and returns the reversed string",
   test("reverseString(5) => 5", () => {
     expect(stringFunctions.reverseString("5")).toEqual("5");
   });
+
+  test("reverseString(5) => Error", () => {
+    expect(() => {
+      stringFunctions.reverseString(5);
+    }).toThrow(TypeError);
+  });
+
+  test("reverseString(``) => null", () => {
+    expect(stringFunctions.reverseString("")).toBe(null);
+  });
 });
 
 describe("isPalindrome() should take a string and returns true if it is a palindrome, and false otherwise", () => {
@@ -21,5 +31,15 @@ describe("isPalindrome() should take a string and returns true if it is a palind
 
   test("isPalindrome(apple) => false", () => {
     expect(stringFunctions.isPalindrome("apple")).toBe(false);
+  });
+
+  test("isPalindrome(555) => TypeError", () => {
+    expect(() => {
+      stringFunctions.isPalindrome(555);
+    }).toThrow(TypeError);
+  });
+
+  test("isPalindrome(``) => null", () => {
+    expect(stringFunctions.isPalindrome("")).toBe(null);
   });
 });
