@@ -1,4 +1,5 @@
 function containMostWater(arr) {
+  //If the array contains 1 or less elements, a container cannot be formed
   if (arr.length <= 1) {
     return null;
   }

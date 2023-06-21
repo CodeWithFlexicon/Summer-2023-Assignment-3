@@ -23,12 +23,30 @@ class ShoppingCart {
 
   removeFromCart(item, quantity) {
     let cart = this.shoppingCart;
-    for (let thing in cart) {
-      if (cart[thing].itemName === item) {
-        if (cart[thing].quantity <= quantity) {
-          delete cart[thing];
+    let cartSize = cart.length;
+    let itemFound = false;
+    if (quantity <= 0) {
+      throw new Error(
+        "You cannot remove 0 items unless... magic and knowledge of the unknown?"
+      );
+    }
+    for (let i = 0; i < cartSize; i++) {
+      if (cart[i].itemName === item) {
+        itemFound = true;
+      }
+    }
+    if (!itemFound) {
+      throw new Error("This item is not in your cart");
+    }
+    for (let i = 0; i < cartSize; i++) {
+      if (cart[i].itemName === item) {
+        if (cart[i].quantity < quantity) {
+          throw new Error(
+            "You are trying to remove a quantity of an item that is more than in your cart"
+          );
         } else {
-          cart[thing].quantity -= quantity;
+          cart[i].quantity -= quantity;
+          return;
         }
       }
     }

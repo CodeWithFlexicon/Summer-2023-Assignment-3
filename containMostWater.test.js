@@ -16,4 +16,8 @@ describe("Given an array of non-negative integers representing the heights of ve
   test("containMostWater([1,1]) => 1", () => {
     expect(containMostWater([1, 1])).toBe(1);
   });
+
+  test("containMostWater([1]) => null", () => {
+    expect(containMostWater([1])).toBe(null);
+  });
 });
